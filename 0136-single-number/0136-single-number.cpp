@@ -1,20 +1,24 @@
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {
-       int num;
-       for(int i=0;i<nums.size();i++){
-        num=nums[i];
-        int count=0;
-        for(int j=0;j<nums.size();j++){
-            if(nums[j]==num){
-            count++;
+
+       
+
+        unordered_map <int, int> m;
+
+        for (int i=0; i<nums.size(); i++){
+            
+            m[nums[i]]++;
+
         }
+
+
+
+
+        for (auto i : m){
+            if (i.second == 1) return i.first;
         }
-        if(count==1){
-            return num;
-        }
-        }
-        return -1;
-        
+
+        return 0;
     }
 };
