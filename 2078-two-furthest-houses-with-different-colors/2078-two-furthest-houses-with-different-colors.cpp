@@ -6,14 +6,15 @@ public:
         for(int i=n-1;i>=0;i--){
            if(colors[i]!=colors[0]){
             m_d=max(m_d,i);
-           }
-           break;
-        }
-        for(int j=0;j<n;j++){
-            if(colors[i]!=colors[n-1]){
-                m_d=max(m_d,(n-1)-i);
-            }
             break;
+           }
+         
+        }
+        for(int i=0;i<n;i++){
+            if(colors[i]!=colors[n-1]){
+                m_d=max(m_d,(n-1)-i); break;
+            }
+           
         }
         return m_d;
     }
