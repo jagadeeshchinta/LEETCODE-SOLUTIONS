@@ -6,7 +6,7 @@ public:
         for(int i=0;i<colors.size();i++){
             for(int j=i+1;j<n;j++){
           if(colors[i]!=colors[j]){
-            m_d=max(m_d,abs(j-i));
+            m_d=max(m_d,j-i);
           }
         }
         }
